@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -28,3 +28,8 @@ def multiply(firstparam, secondparam):
 def sustruct(firstparam, secondparam):
     result = firstparam / secondparam
     return str(result)
+
+@app.route('/favoritefoods')
+def favoritefoods():
+    favorite_foods = ['sandwich', 'smoked ham', 'cookie', 'chocolate']
+    return jsonify(favorite_foods)

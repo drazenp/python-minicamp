@@ -13,3 +13,8 @@ def birthday():
 @app.route('/greeting/<name>')
 def greeting(name):
     return 'Hello ' +  name + '!'
+
+@app.route('/add/<int:firstparam>/<int:secondparam>')
+def add(firstparam, secondparam):
+    sub = firstparam + secondparam
+    return str(sub)

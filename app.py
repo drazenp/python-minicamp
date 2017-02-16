@@ -16,5 +16,15 @@ def greeting(name):
 
 @app.route('/add/<int:firstparam>/<int:secondparam>')
 def add(firstparam, secondparam):
-    sub = firstparam + secondparam
-    return str(sub)
+    result = firstparam + secondparam
+    return str(result)
+
+@app.route('/multiply/<int:firstparam>/<int:secondparam>')
+def multiply(firstparam, secondparam):
+    result = firstparam * secondparam
+    return str(result)
+    
+@app.route('/substruct/<int:firstparam>/<int:secondparam>')
+def sustruct(firstparam, secondparam):
+    result = firstparam / secondparam
+    return str(result)

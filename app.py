@@ -9,3 +9,7 @@ def index():
 @app.route('/birthday')
 def birthday():
     return 'October 13 1986'
+
+@app.route('/greeting/<name>')
+def greeting(name):
+    return 'Hello ' +  name + '!'
